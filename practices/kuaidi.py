@@ -1,6 +1,6 @@
 import requests
 import unittest
-import json
+# import json
 import HTMLTestRunner
 class Test_kuaidi(unittest.TestCase):
 	def setUp(self):
@@ -19,16 +19,19 @@ class Test_kuaidi(unittest.TestCase):
 		#判断最新签收信息，是否已经签收
 		self.assertIn('已签收',data[0]['context'])
 	def test_yunda(self):
+		'''韵达快递'''
 		danhao = '1202247993797'
 		kd = 'yunda'
 		kd_name = '韵达快递'
 		self.ckd(danhao,kd,kd_name)
 	def test_shunfeng(self):
+		'''顺丰快递'''
 		danhao = '789467520541'
 		kd = 'shunfeng'
 		kd_name = '顺丰快递'
 		self.ckd(danhao,kd,kd_name)
 if __name__ == '__main__':
+	#报告保存路径
 	report_dir = r'./report/result.html'
 	test_suite = unittest.TestSuite()
 	test_suite.addTest(Test_kuaidi('test_yunda'))
