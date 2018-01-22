@@ -189,9 +189,9 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>test report</h1>
-<p class='attribute'><strong>Start Time:</strong> 2018-01-19 11:47:51</p>
-<p class='attribute'><strong>Duration:</strong> 0:00:00.362000</p>
-<p class='attribute'><strong>Status:</strong> Pass 4</p>
+<p class='attribute'><strong>Start Time:</strong> 2018-01-22 22:22:32</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:01.230400</p>
+<p class='attribute'><strong>Status:</strong> Pass 7 Error 1</p>
 
 <p class='description'>details</p>
 </div>
@@ -221,21 +221,82 @@ function showOutput(id, name) {
     <td>View</td>
 </tr>
 
+<tr class='errorClass'>
+    <td>test_decive.Device</td>
+    <td>1</td>
+    <td>0</td>
+    <td>0</td>
+    <td>1</td>
+    <td><a href="javascript:showClassDetail('c1',1)">Detail</a></td>
+</tr>
+
+<tr id='ft1.1' class='none'>
+    <td class='errorCase'><div class='testcase'>test_creat</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft1.1')" >
+        error</a>
+
+    <div id='div_ft1.1' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft1.1').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft1.1: Traceback (most recent call last):
+  File "G:\interface\project\WMDS\test_case\test_decive.py", line 10, in test_creat
+    r = self.WDMS.create_device()
+  File "G:\interface\project\WMDS\libs\wdms.py", line 33, in create_device
+    return r.json()
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+Traceback (most recent call last):
+  File "G:\interface\project\WMDS\test_case\test_decive.py", line 10, in test_creat
+    r = self.WDMS.create_device()
+  File "G:\interface\project\WMDS\libs\wdms.py", line 33, in create_device
+    return r.json()
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\site-packages\requests\models.py", line 892, in json
+    return complexjson.loads(self.text, **kwargs)
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\__init__.py", line 319, in loads
+    return _default_decoder.decode(s)
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 339, in decode
+    obj, end = self.raw_decode(s, idx=_w(s, 0).end())
+  File "C:\Users\lintao\AppData\Local\Programs\Python\Python35\lib\json\decoder.py", line 357, in raw_decode
+    raise JSONDecodeError("Expecting value", s, err.value) from None
+json.decoder.JSONDecodeError: Expecting value: line 2 column 1 (char 1)
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
+</tr>
+
 <tr class='passClass'>
     <td>test_login.Test_login</td>
     <td>2</td>
     <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c1',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c2',2)">Detail</a></td>
 </tr>
 
-<tr id='pt1.1' class='hiddenRow'>
+<tr id='pt2.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login_defeat: 账号正确，密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt1.2' class='hiddenRow'>
+<tr id='pt2.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login_successful: 账号正确，登录成功</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
@@ -246,25 +307,49 @@ function showOutput(id, name) {
     <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c2',2)">Detail</a></td>
+    <td><a href="javascript:showClassDetail('c3',2)">Detail</a></td>
 </tr>
 
-<tr id='pt2.1' class='hiddenRow'>
+<tr id='pt3.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test1_logout_successful: 成功退出</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
-<tr id='pt2.2' class='hiddenRow'>
+<tr id='pt3.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test2_logout_defeat: 未登录,退出</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_zone.zones</td>
+    <td>3</td>
+    <td>3</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',3)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_create_zone: 创建区域</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_update_zone: 更新区域名称</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.3' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_update_zone2: 更新区域名称</div></td>
     <td colspan='5' align='center'>pass</td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
-    <td>4</td>
-    <td>4</td>
+    <td>8</td>
+    <td>7</td>
     <td>0</td>
-    <td>0</td>
+    <td>1</td>
     <td>&nbsp;</td>
 </tr>
 </table>

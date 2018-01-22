@@ -1,7 +1,6 @@
 import requests
 import unittest
-import sys
-sys.path.append('./')
+import json
 class WDMS():
 	def __init__(self,s):
 		self.s = s
@@ -15,4 +14,21 @@ class WDMS():
 		payload = {'username':username,'password':password}
 		r = self.s.post(url,json = payload)
 		return r.json()
-	def get_device_info(self,)
+	#create zone;post,json
+	def create_zone(self,index,name):
+		url = r'http://127.0.0.1:8081/api/zones'
+		#Data固定参数，注意大写
+		payload = {'Data':[{'zoneNumber':index,'zoneName':name}]}
+		r = self.s.post(url,json = payload)
+		return r.json()
+	#get the information of devices 
+	def get_device_info(self):
+		url = r'http://127.0.0.1:8081/api/devices?departmentCode=1'
+	#create or update device;post、json
+	def create_device(self):
+		# url = r'http://127.0.0.1:8081/api/devices'
+		url =r'http://127.0.0.1:8081/iclock/data/company/_new_/'
+		payload = {'sn':'123456','zoneNumber':1,'departmentCode':"7","alias":'test'
+		,'masterDevice':'Yes','facialDevice':'No'}
+		r = self.s.post(url,json = payload)
+		return r.json()
