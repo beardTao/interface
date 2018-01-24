@@ -21,6 +21,11 @@ class WDMS():
 		payload = {'Data':[{'zoneNumber':index,'zoneName':name}]}
 		r = self.s.post(url,json = payload)
 		return r.json()
+	#get zone info ; get
+	def get_zone_info(self):
+		url = r'http://127.0.0.1:8081/api/zones'
+		r = self.s.get(url)
+		return r.json()
 	#get the information of devices 
 	def get_device_info(self):
 		url = r'http://127.0.0.1:8081/api/devices?departmentCode=1'
