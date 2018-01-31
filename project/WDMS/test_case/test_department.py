@@ -8,13 +8,18 @@ class deparements(unittest.TestCase):
 		self.WDMS = WDMS(s)
 	
 	#create zone
+<<<<<<< HEAD
 	def test_create_department1(self):
+=======
+	def test1_create_zone1(self):
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0
 		'''在不存在的区域下创建部门'''
 		self.WDMS.login('admin','admin')
 		r = self.WDMS.create_department(1,'testDepartments',1)
 		self.assertEqual(r['message'],"Zone Doesn't Exist")
 		self.assertEqual(r['code'],4002)	
 
+<<<<<<< HEAD
 	def test_create_department2(self):
 		'''在某区域下创建部门'''
 		self.WDMS.login('admin','admin')
@@ -62,3 +67,29 @@ class deparements(unittest.TestCase):
 		r = self.WDMS.delete_department(1,999)
 		self.assertEqual(r['code'],200)
 		self.assertEqual(r['message'],'Succeed')
+=======
+	def test1_create_zone2(self):
+		'''在某区域下创建部门'''
+		self.WDMS.login('admin','admin')
+		r = self.WDMS.create_zone(1,'test2')
+		self.assertEqual(r['message'],'Succeed')
+		self.assertEqual(r['code'],200)
+	# #update zone
+	# def test2_update_zone(self):
+	# 	'''更新区域名称'''
+	# 	self.WDMS.login('admin','admin')
+	# 	r = self.WDMS.create_zone(122,'test2')
+	# 	self.assertEqual(r['message'],'Succeed')
+	# 	self.assertEqual(r['code'],200)
+	# def test3_zone_info(self):
+	# 	'''获取区域信息'''
+	# 	self.WDMS.login('admin','admin')
+	# 	r = self.WDMS.get_zone_info()
+	# 	self.assertEqual(r['code'],200)
+	# 	self.assertEqual(r['message'],'Succeed')
+	# 	#判断返回信息值是否正确
+	# 	result_zoneName = r['data'][0]['zoneName']
+	# 	result_zoneNum = r['data'][0]['zoneNumber']
+	# 	self.assertEqual(result_zoneNum,122)
+	# 	self.assertEqual(result_zoneName,'test2')
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0

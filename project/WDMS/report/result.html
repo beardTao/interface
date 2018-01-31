@@ -189,9 +189,15 @@ function showOutput(id, name) {
 
 <div class='heading'>
 <h1>test report</h1>
+<<<<<<< HEAD:project/WDMS/report/result.html
 <p class='attribute'><strong>Start Time:</strong> 2018-01-31 22:38:07</p>
 <p class='attribute'><strong>Duration:</strong> 0:00:01.908474</p>
 <p class='attribute'><strong>Status:</strong> Pass 13 Failure 2</p>
+=======
+<p class='attribute'><strong>Start Time:</strong> 2018-01-31 19:53:47</p>
+<p class='attribute'><strong>Duration:</strong> 0:00:02.043000</p>
+<p class='attribute'><strong>Status:</strong> Pass 9 Failure 1</p>
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0:project/WDMS/report/result.html
 
 <p class='description'>details</p>
 </div>
@@ -334,7 +340,7 @@ AssertionError: 3006 != 200
 </tr>
 
 <tr class='passClass'>
-    <td>test_login.Test_login</td>
+    <td>test_department.deparements</td>
     <td>2</td>
     <td>2</td>
     <td>0</td>
@@ -342,6 +348,7 @@ AssertionError: 3006 != 200
     <td><a href="javascript:showClassDetail('c3',2)">Detail</a></td>
 </tr>
 
+<<<<<<< HEAD:project/WDMS/report/result.html
 <tr id='pt3.1' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login_defeat: 账号正确，密码错误</div></td>
     <td colspan='5' align='center'>pass</td>
@@ -349,6 +356,44 @@ AssertionError: 3006 != 200
 
 <tr id='pt3.2' class='hiddenRow'>
     <td class='none'><div class='testcase'>test_login_successful: 账号正确，登录成功</div></td>
+=======
+<tr id='pt2.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_create_zone1: 在不存在的区域下创建部门</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt2.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_create_zone2: 在某区域下创建部门</div></td>
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0:project/WDMS/report/result.html
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='passClass'>
+    <td>test_login.Test_login</td>
+    <td>2</td>
+    <td>2</td>
+    <td>0</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c4',2)">Detail</a></td>
+</tr>
+
+<<<<<<< HEAD:project/WDMS/report/result.html
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_logout_successful: 成功退出</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test2_logout_defeat: 未登录,退出</div></td>
+=======
+<tr id='pt3.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_defeat: 账号正确，密码错误</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt3.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test_login_successful: 账号正确，登录成功</div></td>
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0:project/WDMS/report/result.html
     <td colspan='5' align='center'>pass</td>
 </tr>
 
@@ -358,25 +403,7 @@ AssertionError: 3006 != 200
     <td>2</td>
     <td>0</td>
     <td>0</td>
-    <td><a href="javascript:showClassDetail('c4',2)">Detail</a></td>
-</tr>
-
-<tr id='pt4.1' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test1_logout_successful: 成功退出</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr id='pt4.2' class='hiddenRow'>
-    <td class='none'><div class='testcase'>test2_logout_defeat: 未登录,退出</div></td>
-    <td colspan='5' align='center'>pass</td>
-</tr>
-
-<tr class='passClass'>
-    <td>test_zone.zones</td>
-    <td>3</td>
-    <td>3</td>
-    <td>0</td>
-    <td>0</td>
+<<<<<<< HEAD:project/WDMS/report/result.html
     <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
 </tr>
 
@@ -392,14 +419,83 @@ AssertionError: 3006 != 200
 
 <tr id='pt5.3' class='hiddenRow'>
     <td class='none'><div class='testcase'>test3_zone_info: 获取区域信息</div></td>
+=======
+    <td><a href="javascript:showClassDetail('c4',2)">Detail</a></td>
+</tr>
+
+<tr id='pt4.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_logout_successful: 成功退出</div></td>
     <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt4.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test2_logout_defeat: 未登录,退出</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr class='failClass'>
+    <td>test_zone.zones</td>
+    <td>3</td>
+    <td>2</td>
+    <td>1</td>
+    <td>0</td>
+    <td><a href="javascript:showClassDetail('c5',3)">Detail</a></td>
+</tr>
+
+<tr id='pt5.1' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test1_create_zone: 创建区域</div></td>
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0:project/WDMS/report/result.html
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='pt5.2' class='hiddenRow'>
+    <td class='none'><div class='testcase'>test2_update_zone: 更新区域名称</div></td>
+    <td colspan='5' align='center'>pass</td>
+</tr>
+
+<tr id='ft5.3' class='none'>
+    <td class='failCase'><div class='testcase'>test3_zone_info: 获取区域信息</div></td>
+    <td colspan='5' align='center'>
+
+    <!--css div popup start-->
+    <a class="popup_link" onfocus='this.blur();' href="javascript:showTestDetail('div_ft5.3')" >
+        fail</a>
+
+    <div id='div_ft5.3' class="popup_window">
+        <div style='text-align: right; color:red;cursor:pointer'>
+        <a onfocus='this.blur();' onclick="document.getElementById('div_ft5.3').style.display = 'none' " >
+           [x]</a>
+        </div>
+        <pre>
+        
+ft5.3: Traceback (most recent call last):
+  File "E:\interface\project\WDMS\test_case\test_zone.py", line 32, in test3_zone_info
+    self.assertEqual(result_zoneNum,122)
+AssertionError: 1 != 122
+Traceback (most recent call last):
+  File "E:\interface\project\WDMS\test_case\test_zone.py", line 32, in test3_zone_info
+    self.assertEqual(result_zoneNum,122)
+AssertionError: 1 != 122
+
+
+        </pre>
+    </div>
+    <!--css div popup end-->
+
+    </td>
 </tr>
 
 <tr id='total_row'>
     <td>Total</td>
+<<<<<<< HEAD:project/WDMS/report/result.html
     <td>15</td>
     <td>13</td>
     <td>2</td>
+=======
+    <td>10</td>
+    <td>9</td>
+    <td>1</td>
+>>>>>>> aa61326cae9525139a77dce537ba97e4bdb0fcd0:project/WDMS/report/result.html
     <td>0</td>
     <td>&nbsp;</td>
 </tr>
