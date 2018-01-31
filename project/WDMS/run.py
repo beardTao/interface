@@ -10,5 +10,5 @@ if __name__ == '__main__':
 	with open(file_path,'wb') as fp:
 		runner = HTMLTestRunner.HTMLTestRunner(stream = fp,title='test report',description = 'details')
 		runner.run(cases())
-	#发送邮件
-	# func.send_mail()
+		#发送邮件
+		# func.send_mail()
