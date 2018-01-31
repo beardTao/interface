@@ -4,16 +4,19 @@ import json
 class WDMS():
 	def __init__(self,s):
 		self.s = s
+	
 	def login(self,username,password):
 		url = 'http://127.0.0.1:8081/api/accounts/login/'
 		payload = {'username':username,'password':password}
 		r = self.s.post(url,json = payload)
 		return r.json()
+	
 	def logout(self,username,password):
 		url = 'http://127.0.0.1:8081/api/accounts/logout/'
 		payload = {'username':username,'password':password}
 		r = self.s.post(url,json = payload)
 		return r.json()
+	
 	#create zone;post,json
 	def create_zone(self,index,name):
 		url = r'http://127.0.0.1:8081/api/zones'
@@ -21,14 +24,25 @@ class WDMS():
 		payload = {'Data':[{'zoneNumber':index,'zoneName':name}]}
 		r = self.s.post(url,json = payload)
 		return r.json()
+	
 	#get zone info ; get
 	def get_zone_info(self):
 		url = r'http://127.0.0.1:8081/api/zones'
 		r = self.s.get(url)
 		return r.json()
+	
+	'''department'''
+	#create department
+	def create_department(self,index,name,zone_index):
+		url = r'http://127.0.0.1:8081/api/departments?zoneNumber=1'
+		payload = {'Data':[{'departmentCode':index,'departmentName':name,'zoneNumber':zone_index}]}
+		r = self.s.post(url,json = payload)
+		return r.json()
+
 	#get the information of devices 
 	def get_device_info(self):
 		url = r'http://127.0.0.1:8081/api/devices?departmentCode=1'
+	
 	#create or update device;post、json
 	def create_device(self):
 		# url = r'http://127.0.0.1:8081/api/devices'
@@ -37,3 +51,4 @@ class WDMS():
 		,'masterDevice':'Yes','facialDevice':'No'}
 		r = self.s.post(url,json = payload)
 		return r.json()
+
